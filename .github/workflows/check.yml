@@ -1,0 +1,23 @@
+name: Particles
+
+on: push
+
+jobs:
+  particles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    name: Check particles.onnx
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install requirements
+      run: pip install -r requirements.txt
+    - name: Download test data
+      run: |
+        wget https://github.com/hse-aml/hadron-collider-machine-learning/releases/download/Week_2/test.csv.gz
+    - name: Try predict.py
+      run: |
+        python predict.py
