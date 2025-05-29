@@ -2,5 +2,5 @@ numpy
 onnxruntime
 pandas
 scikit-learn
-tensorflow
+tensorflow<2.16
 tf2onnx
