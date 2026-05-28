@@ -3,4 +3,4 @@ onnxruntime
 pandas
 scikit-learn
 tensorflow<2.16
-tf2onnx
+tf2onnx<1.17
